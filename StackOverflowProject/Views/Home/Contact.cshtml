@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="jumbotron">
+            <br />
+
+            <h1>Learn, Share, Build!</h1>
+            <h3>Each month, over 50 million developers come to Stack Overflow to learn, share their knowledge, and build their careers and enhance their skills.</h3>
+            <p class="lead">Join the world’s largest developer community.</p>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header bg-dark text-light">Teams</div>
+            <div class="card-body">
+                <p>A private, secure home for your team’s questions and answers. Perfect for teams of 10-500 members. No more digging through stale wikis and lost emails—give your team back the time it needs to build better products.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header bg-dark text-light">Enterprise</div>
+            <div class="card-body">
+                <p>Stack Overflow for Enterprise is a private, secure home for your organization’s questions and answers. Empower your teams to find and share information without disrupting their workflows.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        var anchorElement = document.querySelector("a[href='/Home/Contact']");
+        if (anchorElement) {
+            anchorElement.setAttribute("id", "active");
+        }
+    });
+</script>

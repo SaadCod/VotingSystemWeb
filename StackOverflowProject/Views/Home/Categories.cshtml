@@ -1,0 +1,24 @@
+﻿@model List<StackOverflowProject.ViewModels.CategoryViewModel>
+
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4>Categories</h4>
+        <ul class="list-group list-group-flush">
+            @foreach (var item in Model)
+            {
+                <li class="list-group-item list-group-item-action"><b>@item.CategoryID. @item.CategoryName</b></li>
+            }
+        </ul>
+    </div>
+</div>
+
+<script>
+    $("a[href='/Home/Categories']").attr("id", "active");
+</script>
+
+

@@ -1,0 +1,30 @@
+﻿@model List<StackOverflowProject.ViewModels.QuestionViewModel>
+
+@{
+    ViewBag.Title = "Questions";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+
+
+
+}
+<h1>Questions</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                Html.RenderPartial("Question", item);
+            }
+        </table>
+        @if (Session["CurrentUserName"] != null)
+        {
+            <a href="/questions/create" class="btn btn-primary">Add Question</a>
+        }
+    </div>
+</div>
+
+<script>
+    $("a[href='/AllQuestions']").attr("id", "active");
+</script>
+
+

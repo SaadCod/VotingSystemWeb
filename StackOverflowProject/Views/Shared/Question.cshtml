@@ -1,0 +1,48 @@
+﻿@model StackOverflowProject.ViewModels.QuestionViewModel
+
+<tr>
+    <td><span class="custom-badge">@Model.VotesCount</span> Votes</td>
+    <td><span class="custom-badge">@Model.AnswersCount</span> Answers</td>
+    <td><span class="custom-badge">@Model.ViewsCount</span> Views</td>
+  
+    <td class="text-dark">
+        <h5> 
+            <a href="/questions/view/@Model.QuestionID" class="user-friendly-link text-truncate"><b>@Model.QuestionName</b></a>
+           <h6> Click question to view </h6>
+        
+            </h5>
+        <span class="custom-badge">@Model.Category.CategoryName</span>
+           
+    </td>
+    <td>
+        <b>
+        @if (Convert.ToInt32(Session["CurrentUserID"]) != Model.UserID)
+        {
+            @:by @Model.User.Name
+        }
+        else
+        {
+            @:by you
+        }
+            </b>
+    </td>
+    <td>
+        <b>
+        on @Model.QuestionDateAndTime
+            </b>
+    </td>
+</tr>
+
+<style>
+    /* Add some styling to the link */
+    .user-friendly-link {
+        color: #007bff; /* Set the link color */
+        text-decoration: none; /* Remove the default underline */
+        font-weight: bold; /* Make the link text bold */
+    }
+
+        /* Add a hover effect */
+        .user-friendly-link:hover {
+            text-decoration: underline; /* Underline the link on hover */
+        }
+</style>
