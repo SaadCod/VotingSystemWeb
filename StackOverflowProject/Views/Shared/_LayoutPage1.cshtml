@@ -24,29 +24,29 @@
             <div class="collapse navbar-collapse" id="collapsibleNavBar">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/home/index">Home</a>
+                        <a class="nav-link" href="/VotingSystemWeb/home/index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/About">About</a>
+                        <a class="nav-link" href="/VotingSystemWeb/Home/About">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Contact">Contact</a>
+                        <a class="nav-link" href="/VotingSystemWeb/Home/Contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Categories">Categories</a>
+                        <a class="nav-link" href="/VotingSystemWeb/Home/Categories">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/AllQuestions">Questions</a>
+                        <a class="nav-link" href="/VotingSystemWeb/AllQuestions">Questions</a>
                     </li>
 
 
                     @if (Session["CurrentUserName"] == null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link" href="/account/login">Login</a>
+                            <a class="nav-link" href="/VotingSystemWeb/account/login">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Account/Register">Register</a>
+                            <a class="nav-link" href="/VotingSystemWeb/Account/Register">Register</a>
                         </li>
                     }
 
@@ -59,9 +59,9 @@
                                 @Session["CurrentUserName"]
                             </a>
                             <div class="dropdown-menu bg-info">
-                                <a class="dropdown-item" href="/account/logout">Logout</a>
-                                <a class="dropdown-item" href="/account/changeprofile">Change Profile</a>
-                                <a class="dropdown-item" href="/account/changepassword">Change Password</a>
+                                <a class="dropdown-item" href="/VotingSystemWeb/account/logout">Logout</a>
+                                <a class="dropdown-item" href="/VotingSystemWeb/account/changeprofile">Change Profile</a>
+                                <a class="dropdown-item" href="/VotingSystemWeb/account/changepassword">Change Password</a>
                             </div>
                         </li>
                     }
